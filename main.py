@@ -17,7 +17,6 @@ app = FastAPI()
 async def get_image(url):
     if validators.url(url) is True:
         im = Image.open(requests.get(url, stream=True).raw)
-        print(im)
 
         # Init model, transforms
         model = ViTForImageClassification.from_pretrained('nateraw/vit-age-classifier')
@@ -44,5 +43,4 @@ async def get_image(url):
 
 
 if __name__ == "__main__":
-
     uvicorn.run(app, host="127.0.0.1", port=8000)
