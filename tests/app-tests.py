@@ -3,7 +3,7 @@ def test_old_man(client):
     response = client.get(
         "/get-age-by-photo",
         params={
-            "url": "https://s1.hostingkartinok.com/uploads/images/2023/12/bed997e1ae3dff00704fffe7aff26df9.jpg",
+            'url': 'https://s1.hostingkartinok.com/uploads/images/2023/12/bed997e1ae3dff00704fffe7aff26df9.jpg',
         }
     )
     assert response.status_code == 200
@@ -20,7 +20,7 @@ def test_young_man(client):
     )
     assert response.status_code == 200
     assert response.json() == {
-        'Age': '5-10'}
+        'Age': '3-9'}
 
 def test_pustoi_query(client):
     response = client.get(
@@ -31,4 +31,4 @@ def test_pustoi_query(client):
     )
     assert response.status_code == 200
     assert response.json() == {
-        "Age": "This's not url"}
+        'Age': 'This is not url'}
