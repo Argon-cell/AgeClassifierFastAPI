@@ -8,7 +8,7 @@ def test_old_man(client):
     )
     assert response.status_code == 200
     assert response.json() == {
-        'Age': 'more than 70'}
+        'Age': '60-69'}
 
 
 def test_young_man(client):
