@@ -3,7 +3,7 @@ def test_old_man(client):
     response = client.get(
         "/get-age-by-photo",
         params={
-            'url': 'https://s1.hostingkartinok.com/uploads/images/2023/12/bed997e1ae3dff00704fffe7aff26df9.jpg',
+            'url': 'https://static01.nyt.com/images/2022/06/16/arts/16OLD-MAN1/16OLD-MAN1-mediumSquareAt3X-v3.jpg',
         }
     )
     assert response.status_code == 200
